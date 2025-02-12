@@ -13,7 +13,6 @@ class Crypto extends Component {
     'JPY': '¥',
     'GBP': '£',
     'EUR': '€',
-    'BRL': 'R$',
     getSymbol(currency) {
       return this[currency] || '¤';
     }

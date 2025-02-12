@@ -5,7 +5,8 @@ class Statusbar extends Component {
     categories: '.categories ul',
     tabs: '#tabs ul li',
     indicator: '.indicator',
-    addTab: '.add-tab'
+    addTab: '.add-tab',
+    fastLink: '.fast-link',
   };
 
   modal;
@@ -170,7 +171,7 @@ class Statusbar extends Component {
           background: rgb(255 255 255 / 10%);
       }
 
-      .add-tab {
+      .fast-link {
           border: 0;
           background: #282830;
           color: #9898a5;
@@ -178,13 +179,12 @@ class Statusbar extends Component {
           border-radius: 5px 15px 15px 5px;
       }
 
-      .add-tab:hover {
+      .fast-link:hover {
           filter: brightness(1.2);
       }
 
-      .add-tab-icon {
-          font-size: 12pt;
-          font-weight: bold;
+      .fast-link-icon {
+          width: 70%;
       }
     `;
   }
@@ -193,8 +193,8 @@ class Statusbar extends Component {
     return `
         <div id="tabs">
             <cols>
-                <button class="+ add-tab">
-                  <span class="material-icons add-tab-icon">add</span>
+                <button class="+ fast-link">
+                  <img class="fast-link-icon" src="src/img/pokeball.svg"/>
                 </button>
                 <ul class="- indicator"></ul>
                 <div class="+ widgets col-end">
@@ -213,6 +213,13 @@ class Statusbar extends Component {
       tab.onclick = ({ target }) => this.handleTabChange(target));
 
     document.onkeydown = (e) => this.handleKeyPress(e);
+    document.onwheel = (e) => this.handleWheelScroll(e);
+
+    this.refs.fastLink.onclick = () => {
+      if (CONFIG.config.fastLink) {
+        window.location.href = CONFIG.config.fastLink;
+      }
+    }
 
     if (CONFIG.openLastVisitedTab)
       window.onbeforeunload = () => this.saveCurrentTab();
@@ -229,6 +236,29 @@ class Statusbar extends Component {
 
   handleTabChange(tab) {
     this.activateByKey(Number(tab.getAttribute('tab-index')));
+  }
+
+  handleWheelScroll(event) {
+    if (!event) return;
+
+    let { target, wheelDelta } = event;
+
+    if (target.shadow && target.shadow.activeElement) return;
+
+    let activeTab = -1;
+    this.refs.tabs.forEach((tab, index) => {
+      if (tab.getAttribute("active") === "") {
+        activeTab = index;
+      }
+    });
+
+    if (wheelDelta > 0) {
+      this.activateByKey((activeTab + 1) % (this.refs.tabs.length - 1));
+    } else {
+      this.activateByKey(
+        (activeTab - 1) < 0 ? this.refs.tabs.length - 2 : activeTab - 1,
+      );
+    }
   }
 
   handleKeyPress(event) {

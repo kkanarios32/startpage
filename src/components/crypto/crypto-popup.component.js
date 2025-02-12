@@ -83,10 +83,8 @@ class CryptoPopup extends Component {
     return `
       <div class="crypto-options">
         <select name="coin" class="dropdown coins-option">
-          <option value="ETH">ETH</option>
           <option value="BTC">BTC</option>
-          <option value="USDT">USDT</option>
-          <option value="USDC">USDC</option>
+          <option value="ETH">ETH</option>
           <option value="BNB">BNB</option>
           <option value="XRP">XRP</option>
           <option value="ADA">ADA</option>
@@ -97,8 +95,6 @@ class CryptoPopup extends Component {
         <select name="currency" class="dropdown currencies-option">
           <option value="USD">USD $</option>
           <option value="EUR">EUR €</option>
-          <option value="JPY">YEN ¥</option>
-          <option value="BRL">BRL R$</option>
         </select>
       </div>
     `;
