@@ -20,7 +20,7 @@
 
 ## Configuration
 
-For now, some settings can be tweaked by changing the `CONFIG` object located in `./userconfig.js`.
+For now, some settings can be tweaked by changing the `CONFIG` object located in `./work.js`.
 
 ### Disabling a component
 
@@ -65,7 +65,7 @@ All the available icons can be found on [tabler-icons](https://tabler-icons.io).
 
 Change the clock format in the status bar using [strftime.org](https://strftime.org) format.
 
-Config example (`userconfig.js`):
+Config example (`work.js`):
 
 ```js
 const CONFIG = new Config({
