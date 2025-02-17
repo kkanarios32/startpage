@@ -30,440 +30,292 @@ const CONFIG = new Config({
   openLastVisitedTab: false,
   tabs: [
     {
-      "name": "main",
-      "background_url": "src/img/banners/cbg-6.gif",
+      "name": "forex",
+      "background_url": "src/img/banners/cbg-4.gif",
       "categories": [
         {
-          "name": "daily",
+          "name": "trading",
           "links": [
             {
-              "url": "https://chat.openai.com/",
-              "name": "ChatGPT",
-              "icon": "brand-openai",
-              "icon_color": "#00a67e"
+              "url": "https://www.tradingview.com/chart/WChj2AGk/",
+              "name": "TradingView",
+              "icon": "trending-up",
+              "icon_color": "#2962FF"
             },
             {
-              "name": "Github",
-              "url": "https://github.com/freelancehunt/freelancehunt.com",
-              "icon": "brand-github",
-              "icon_color": "#6e40c9"
-            },
-            {
-              "url": "https://app.circleci.com/pipelines/github/freelancehunt/freelancehunt.com",
-              "name": "CircleCI",
-              "icon": "reload",
-              "icon_color": "#343434"
-            },
-            {
-              "url": "https://app.currents.dev/projects/mrW9Mp/runs",
-              "name": "Currents.dev",
-              "icon": "brand-cloudflare",
-              "icon_color": "#f6821f"
-            },
-            {
-              "url": "https://gmail.com/",
-              "name": "Gmail",
-              "icon": "brand-gmail",
-              "icon_color": "#ea4335"
-            }
-          ]
-        },
-        {
-          "name": "Tasks",
-          "links": [
-            {
-              "name": "Reverse project",
-              "url": "https://app.asana.com/0/1208954596088448/1208954551103924",
-              "icon": "brand-asana",
-              "icon_color": "#ff5733"
-            },
-            {
-              "name": "Batman",
-              "url": "https://app.asana.com/0/1202506978686328/list",
-              "icon": "brand-asana",
-              "icon_color": "#ff8c00"
-            },
-            {
-              "name": "Focus",
-              "url": "https://app.asana.com/0/534203904994086/list",
-              "icon": "brand-asana",
-              "icon_color": "#ffa500"
-            }
-          ]
-        },
-        {
-          "name": "Error monitoring and logging",
-          "links": [
-            {
-              "name": "Datadog",
-              "url": "https://app.datadoghq.com/apm/home",
-              "icon": "dog",
-              "icon_color": "#774aa4"
-            },
-            {
-              "name": "Bugsnag",
-              "url": "https://app.bugsnag.com/freelancehunt/php/errors",
-              "icon": "bug",
-              "icon_color": "#ff4c4c"
-            },
-            {
-              "name": "Pydantic Logfire",
-              "url": "https://logfire.pydantic.dev/freelancehunt/polyglot?env=production",
-              "icon": "terminal",
-              "icon_color": "#008080"
-            },
-            {
-              "name": "Better Uptime",
-              "url": "https://uptime.betterstack.com/team/3891/monitors",
-              "icon": "clock",
-              "icon_color": "#2e8b57"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'devops',
-      background_url: 'src/img/banners/cbg-8.gif',
-      categories: [
-        {
-          "name": "Infrastructure",
-          "links": [
-            {
-              "url": "https://dash.cloudflare.com/",
-              "name": "Cloudflare",
-              "icon": "brand-cloudflare",
-              "icon_color": "#f6821f"
-            },
-            {
-              "url": "https://cloud.linode.com/linodes",
-              "name": "Linode Manager",
-              "icon": "server",
-              "icon_color": "#00a95c"
-            },
-            {
-              "url": "https://us-east-2.console.aws.amazon.com/console/home",
-              "name": "Amazon S3",
-              "icon": "brand-amazon",
-              "icon_color": "#ff9900"
-            },
-            {
-              "url": "https://app.terraform.io/app/freelancehunt/workspaces/cloudflare/runs",
-              "name": "Terraform Cloud",
-              "icon": "layers-intersect",
-              "icon_color": "#623ce4"
-            }
-          ]
-        },
-        {
-          "name": "Monitoring and alerting",
-          "links": [
-            {
-              "url": "https://app.datadoghq.com/kubernetes",
-              "name": "K8s",
-              "icon": "hexagon",
-              "icon_color": "#326ce5"
-            },
-            {
-              "url": "https://app.sleuth.io/freelancehunt/freelancehunt",
-              "name": "Sleuth",
-              "icon": "search",
-              "icon_color": "#4caf50"
-            },
-            {
-              "url": "https://console.vantage.sh/",
-              "name": "Vantage",
-              "icon": "chart-line",
-              "icon_color": "#4a90e2"
-            },
-            {
-              "url": "https://dmarcdigests.com/",
-              "name": "DMARC Digests",
-              "icon": "mail",
-              "icon_color": "#ff9800"
-            },
-            {
-              "url": "https://hetrixtools.com/",
-              "name": "Hetrix",
-              "icon": "activity",
-              "icon_color": "#ff4757"
-            }
-          ]
-        },
-        {
-          "name": "Documentation",
-          "links": [
-            {
-              "url": "https://freelancehunt.atlassian.net/wiki/spaces/DEV/pages/265650177/Standard+Operating+Procedures+SOP",
-              "name": "Standard Operating Procedures",
-              "icon": "book",
-              "icon_color": "#0052cc"
-            },
-            {
-              "url": "https://kubernetes.io/docs/reference/kubectl/quick-reference/",
-              "name": "Kubectl Cheat Sheet",
-              "icon": "terminal",
-              "icon_color": "#326ce5"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Prod',
-      background_url: 'src/img/banners/cbg-3.gif',
-      categories: [
-        {
-          "name": "Core",
-          "links": [
-            {
-              "url": "https://platform.openai.com/usage",
-              "name": "OpenAI",
-              "icon": "brand-openai",
-              "icon_color": "#4a4a4a"
-            },
-            {
-              "url": "https://localise.biz/session/auth/login/",
-              "name": "Localise",
-              "icon": "language",
-              "icon_color": "#3498db"
-            },
-            {
-              "url": "https://unleash.freelancehunt.net/",
-              "name": "Unleash",
-              "icon": "toggle-right",
-              "icon_color": "#ff5733"
-            },
-            {
-              "url": "https://cockpit.sumsub.com/checkus#/home",
-              "name": "SumSub",
-              "icon": "user-check",
-              "icon_color": "#007bff"
-            },
-          ]
-        },
-        {
-          "name": "Administration",
-          "links": [
-            {
-              "url": "https://admin.google.com/u/0/ac/home",
-              "name": "Google Admin",
-              "icon": "settings",
-              "icon_color": "#4285f4"
-            },
-            {
-              "url": "https://atomic.center/login/",
-              "name": "AtomPark",
-              "icon": "user-circle",
-              "icon_color": "#00b5ad"
-            },
-            {
-              "url": "https://checkmobi.com/",
-              "name": "CheckMobi",
-              "icon": "device-mobile",
-              "icon_color": "#f39c12"
-            },
-            {
-              "url": "https://cloudinary.com/console/",
-              "name": "Cloudinary",
-              "icon": "cloud",
-              "icon_color": "#3498db"
-            }
-          ]
-        },
-        {
-          "name": "Marketing and advertising",
-          "links": [
-            {
-              "url": "https://app.getbeamer.com/home",
-              "name": "Beamer",
-              "icon": "speakerphone",
-              "icon_color": "#ff6c37"
-            },
-            {
-              "url": "https://mail.missiveapp.com/",
-              "name": "Missive",
-              "icon": "message",
-              "icon_color": "#ff6c37"
-            },
-            {
-              "url": "https://getresponse.freelancehunt.com/",
-              "name": "GetResponse",
-              "icon": "mail",
-              "icon_color": "#1dbf73"
-            },
-            {
-              "url": "https://app.sendgrid.com/",
-              "name": "SendGrid",
-              "icon": "mail",
-              "icon_color": "#f1f1f1"
-            },
-          ]
-        },
-      ]
-    },
-    {
-      name: 'Dev',
-      background_url: 'src/img/banners/cbg-7.gif',
-      categories: [
-        {
-          "name": "Development tools",
-          "links": [
-            {
-              "url": "https://hub.docker.com/orgs/freelancehunt",
-              "name": "Docker Hub",
-              "icon": "brand-docker",
-              "icon_color": "#2496ed"
-            },
-            {
-              "url": "https://freelancehunt.postman.co/workspaces",
-              "name": "Postman",
-              "icon": "flask",
-              "icon_color": "#ff6c37"
-            },
-            {
-              "url": "https://accounts.lambdatest.com/dashboard",
-              "name": "Lambda Test",
-              "icon": "test-pipe-2",
-              "icon_color": "#2d72d9"
-            },
-            {
-              "url": "https://dashboard.ngrok.com/",
-              "name": "ngrok",
-              "icon": "link",
-              "icon_color": "#5c5b5b"
-            },
-          ]
-        },
-        {
-          "name": "Code security",
-          "links": [
-            {
-              "url": "https://app.aikido.dev/",
-              "name": "Aikido Security",
-              "icon": "shield-lock",
-              "icon_color": "#ff6c37"
-            },
-            {
-              "url": "https://dashboard.gitguardian.com/",
-              "name": "GitGuardian",
-              "icon": "git-commit",
-              "icon_color": "#4f565e"
-            },
-            {
-              "url": "https://semgrep.dev/orgs/freelancehunt",
-              "name": "Semgrep",
-              "icon": "code",
-              "icon_color": "#e91e63"
-            }
-          ]
-        },
-        {
-          "name": "Code quality",
-          "links": [
-            {
-              "url": "https://codeclimate.com/repos/649ed5bd5394ee0105779501",
-              "name": "Code Climate",
-              "icon": "thermometer",
-              "icon_color": "#52c41a"
-            },
-            {
-              "url": "https://coveralls.io/",
-              "name": "Coveralls.io",
-              "icon": "box",
-              "icon_color": "#ffcc00"
-            },
-          ]
-        },
-
-      ]
-    },
-    {
-      name: 'other',
-      background_url: 'src/img/banners/cbg-9.gif',
-      categories: [
-        {
-          "name": "Work",
-          "links": [
-            {
-              "url": "https://docs.google.com/spreadsheets/u/0/d/1CDeInulHEaSo_g8hk889ANnTCYxevihKLKd67YzLyQ0/htmlview",
-              "name": "Freelancehunt",
-              "icon": "table",
-              "icon_color": "#0F9D58"
-            },
-            {
-              "url": "https://dashboard.peoplebox.ai/dashboard",
-              "name": "Peoplebox",
-              "icon": "users",
+              "url": "https://app.fxreplay.com/auth/sessions",
+              "name": "FX Replay",
+              "icon": "player-play",
               "icon_color": "#4CAF50"
             },
             {
-              "url": "https://docs.google.com/document/d/1Z0Ge38orFgBHgx_mHNTo4BZ6Vmbh7hBPYtqa3oRNT0s/edit?disco=AAAAxjhRUrE",
-              "name": "Proposals",
-              "icon": "file-text",
-              "icon_color": "#F57C00"
-            },
-            {
-              "url": "https://docs.google.com/document/d/1YNWn9V9MIpp5Hu2bGFGEk3RJK9aLNyHz8xNZO7qshYw/edit",
-              "name": "DevOps questions",
-              "icon": "file",
-              "icon_color": "#1976D2"
+              "url": "https://www.notion.so/FX-Replay-1412ab2e4385807bb40dc2a41f63d361",
+              "name": "FX Replay config",
+              "icon": "notebook",
+              "icon_color": "#505050"
             }
           ]
-
         },
         {
-          "name": "Docs",
+          "name": "darktrader",
           "links": [
             {
-              "url": "https://freelancehunt.atlassian.net/wiki/spaces/DEV/overview",
-              "name": "Confluence",
+              "url": "https://discord.com/channels/1120774187368321167/1145806812709404834",
+              "name": "Discord",
+              "icon": "message-circle",
+              "icon_color": "#5865F2"
+            },
+            {
+              "url": "https://www.notion.so/Trading-strategy-1412ab2e4385809a82f8c266875faba4?pvs=25",
+              "name": "Trading Strategy",
+              "icon": "trending-up",
+              "icon_color": "#4CAF50"
+            },
+            {
+              "url": "https://drive.google.com/drive/folders/1YowZ6fyINbLyuSSXd0TW9s_1004waTEo",
+              "name": "Lessons",
               "icon": "book",
-              "icon_color": "#0052CC"
+              "icon_color": "#FF9800"
             },
             {
-              "url": "https://www.conventionalcommits.org/en/v1.0.0/#summary",
-              "name": "Conventional Commits",
-              "icon": "align-left",
-              "icon_color": "#F1C232"
+              "url": "https://www.notion.so/5-0-c9fe9452da5b481092608c379d95c031?pvs=25",
+              "name": "Homework",
+              "icon": "edit",
+              "icon_color": "#3F51B5"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "name": "crypto",
+      "background_url": "src/img/banners/cbg-3.gif",
+      "categories": [
+        {
+          "name": "trading",
+          "links": [
+            {
+              "url": "https://www.tradingview.com/chart/6DaJFrFN/",
+              "name": "TradingView",
+              "icon": "trending-up",
+              "icon_color": "#2962FF"
             },
             {
-              "url": "https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type",
-              "name": "Angular commit types",
-              "icon": "git-merge",
-              "icon_color": "#DD0031"
+              "url": "https://tradersdiaries.com/diary/lk/crypto",
+              "name": "Trader's Diaries",
+              "icon": "book",
+              "icon_color": "#8E44AD"
+            },
+            {
+              "url": "https://tradermake.money/app2/account/index",
+              "name": "TMM",
+              "icon": "coins",
+              "icon_color": "#27AE60"
+            },
+            {
+              "url": "https://liner.scalpsecta.com/",
+              "name": "Scalpsecta",
+              "icon": "activity",
+              "icon_color": "#C0392B"
             }
           ]
         },
         {
-          "name": "Relax",
+          "name": "websites",
           "links": [
             {
-              "url": "https://www.chess.com/home",
-              "name": "Chess",
-              "icon": "chess",
-              "icon_color": "#B6A136"
+              "url": "https://bingx.com/",
+              "name": "BingX",
+              "icon": "chart-line",
+              "icon_color": "#0052FF"
             },
             {
-              "url": "https://monkeytype.com/",
-              "name": "Monkeytype",
-              "icon": "align-left",
-              "icon_color": "#F1C232"
+              "url": "https://www.bybit.com/ru-RU/",
+              "name": "Bybit",
+              "icon": "chart-line",
+              "icon_color": "#F7931A"
             },
             {
-              "url": "https://leetcode.com/",
-              "name": "LeetCode",
-              "icon": "code",
-              "icon_color": "#FFA500"
+              "url": "https://www.binance.com/ru",
+              "name": "Binance",
+              "icon": "chart-line",
+              "icon_color": "#F3BA2F"
             },
             {
-              "url": "https://tetris.com/",
-              "name": "Tetris",
-              "icon": "brand-apple-arcade",
-              "icon_color": "#008C00"
+              "url": "https://www.okx.com/ru",
+              "name": "OKX",
+              "icon": "chart-line",
+              "icon_color": "#000000"
+            }
+          ]
+        },
+        {
+          "name": "spot",
+          "links": [
+            {
+              "url": "https://dropstab.com/ru",
+              "name": "Dropstab",
+              "icon": "coins",
+              "icon_color": "#0052FF"
+            },
+            {
+              "url": "https://coinmarketcap.com/ru/",
+              "name": "CoinMarketCap",
+              "icon": "coins",
+              "icon_color": "#0666EB"
+            },
+            {
+              "url": "https://www.stakingrewards.com/",
+              "name": "Staking Rewards",
+              "icon": "wallet",
+              "icon_color": "#1E88E5"
             }
           ]
 
+        }
+      ]
+    },
+    {
+      "name": "sites",
+      "background_url": "src/img/banners/cbg-7.gif",
+      "categories": [
+        {
+          "name": "management",
+          "links": [
+            {
+              "url": "https://dash.cloudflare.com/f777c13ecfd6ebae7cd61474485856a7",
+              "name": "Cloudflare",
+              "icon": "shield",
+              "icon_color": "#F38020"
+            },
+            {
+              "url": "https://search.google.com/u/0/search-console",
+              "name": "Google Console",
+              "icon": "search",
+              "icon_color": "#4285F4"
+            },
+            {
+              "url": "https://analytics.google.com/analytics/web/?authuser=0",
+              "name": "Google Analytics",
+              "icon": "chart-bar",
+              "icon_color": "#E37400"
+            },
+            {
+              "url": "https://app.amplitude.com/analytics/damp-butterfly-427504/home",
+              "name": "Amplitude",
+              "icon": "activity",
+              "icon_color": "#1E88E5"
+            }
+          ]
+        },
+        {
+          "name": "websites",
+          "links": [
+            {
+              "url": "https://rucasino.win/admin",
+              "name": "Casino",
+              "icon": "shield",
+              "icon_color": "#8B0000"
+            },
+            {
+              "url": "https://lolfinder.net/parties",
+              "name": "LoL Finder",
+              "icon": "swords",
+              "icon_color": "#1E90FF"
+            },
+            {
+              "url": "https://lancer.club/dashboard",
+              "name": "Lancer Club",
+              "icon": "gauge",
+              "icon_color": "#FF4500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "person",
+      "background_url": "src/img/banners/cbg-9.gif",
+      "categories": [
+        {
+          "name": "car",
+          "links": [
+            {
+              "url": "https://driver.top/",
+              "name": "Driver Top",
+              "icon": "steering-wheel",
+              "icon_color": "#007BFF"
+            },
+            {
+              "url": "https://e-drive.com.ua/",
+              "name": "E-Drive",
+              "icon": "bolt",
+              "icon_color": "#28A745"
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "links": [
+            {
+              "url": "https://www.novakom.com.ua/abonent/payment/index.html",
+              "name": "Novakom Payment",
+              "icon": "credit-card",
+              "icon_color": "#007BFF"
+            },
+            {
+              "url": "https://my.yasno.com.ua/cabinet/person/",
+              "name": "Yasno Cabinet",
+              "icon": "bulb",
+              "icon_color": "#F1C232"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "name": "games",
+      "background_url": "src/img/banners/cbg-13.gif",
+      "categories": [
+        {
+          "name": "Nintendo",
+          "links": [
+            {
+              "url": "https://ntdeals.net",
+              "name": "Nintendo Deals",
+              "icon": "shopping-cart",
+              "icon_color": "#E60012"
+            },
+            {
+              "url": "https://eshop-prices.com/",
+              "name": "eShop Prices",
+              "icon": "shopping-cart",
+              "icon_color": "#F79E1B"
+            },
+            {
+              "url": "https://romsfun.com/roms/nintendo-3ds",
+              "name": "RomsFun",
+              "icon": "package",
+              "icon_color": "#0061A8"
+            },
+            {
+              "url": "https://romspure.cc/roms/3ds",
+              "name": "RomsPure",
+              "icon": "package",
+              "icon_color": "#008080"
+            }
+          ]
+        },
+        {
+          "name": "PlayStation",
+          "links": [
+            {
+              "url": "https://vitadb.rinnegatamante.it/",
+              "name": "VitaDB",
+              "icon": "database",
+              "icon_color": "#4A90E2"
+            },
+          ]
         },
       ]
     }
