@@ -194,7 +194,7 @@ class Statusbar extends Component {
         <div id="tabs">
             <cols>
                 <button class="+ fast-link">
-                  <img class="fast-link-icon" src="src/img/pokeball.svg"/>
+                  <img class="fast-link-icon" src="src/img/openai.png"/>
                 </button>
                 <ul class="- indicator"></ul>
                 <div class="+ widgets col-end">

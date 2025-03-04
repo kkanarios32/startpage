@@ -30,6 +30,69 @@ const CONFIG = new Config({
   openLastVisitedTab: false,
   tabs: [
     {
+      "name": "person",
+      "background_url": "src/img/banners/cbg-9.gif",
+      "categories": [
+        {
+          "name": "daily",
+          "links": [
+            {
+              "url": "https://ticktick.com/webapp/#q/week/tasks",
+              "name": "TickTick",
+              "icon": "list-check",
+              "icon_color": "#FFAA00"
+            },
+            {
+              "url": "https://web.budgetbakers.com/dashboard",
+              "name": "BudgetBakers",
+              "icon": "wallet",
+              "icon_color": "#4CAF50"
+            },
+            {
+              "url": "https://gmail.com/",
+              "name": "Gmail",
+              "icon": "brand-gmail",
+              "icon_color": "#ea4335"
+            }
+          ]
+        },
+        {
+          "name": "car",
+          "links": [
+            {
+              "url": "https://driver.top/",
+              "name": "Driver Top",
+              "icon": "steering-wheel",
+              "icon_color": "#007BFF"
+            },
+            {
+              "url": "https://e-drive.com.ua/",
+              "name": "E-Drive",
+              "icon": "bolt",
+              "icon_color": "#28A745"
+            }
+          ]
+        },
+        {
+          "name": "home",
+          "links": [
+            {
+              "url": "https://www.novakom.com.ua/abonent/payment/index.html",
+              "name": "Novakom Payment",
+              "icon": "credit-card",
+              "icon_color": "#007BFF"
+            },
+            {
+              "url": "https://my.yasno.com.ua/cabinet/person/",
+              "name": "Yasno Cabinet",
+              "icon": "bulb",
+              "icon_color": "#F1C232"
+            }
+          ]
+        },
+      ]
+    },
+    {
       "name": "forex",
       "background_url": "src/img/banners/cbg-4.gif",
       "categories": [
@@ -83,6 +146,17 @@ const CONFIG = new Config({
               "icon": "edit",
               "icon_color": "#3F51B5"
             }
+          ]
+        },
+        {
+          "name": "TS",
+          "links": [
+            {
+              "url": "https://jumbled-hole-c5a.notion.site/74f713bda46740a680742fbe55920785",
+              "name": "Бекстеты",
+              "icon": "book",
+              "icon_color": "#5865F2"
+            },
           ]
         },
       ]
@@ -230,47 +304,30 @@ const CONFIG = new Config({
               "icon_color": "#FF4500"
             }
           ]
+        },
+        {
+          "name": "Error monitoring and logging",
+          "links": [
+            {
+              "name": "Bugsnag",
+              "url": "https://app.bugsnag.com/my-3/lolfinder/errors",
+              "icon": "bug",
+              "icon_color": "#ff4c4c"
+            },
+            {
+              "url": "https://circleci.com/gh/TheMY3/lolfinder",
+              "name": "CircleCI",
+              "icon": "reload",
+              "icon_color": "#343434"
+            },
+            {
+              "url": "https://cloud.cypress.io/projects/b7knmv/runs",
+              "name": "Cypress",
+              "icon": "brand-cloudflare",
+              "icon_color": "#f6821f"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "name": "person",
-      "background_url": "src/img/banners/cbg-9.gif",
-      "categories": [
-        {
-          "name": "car",
-          "links": [
-            {
-              "url": "https://driver.top/",
-              "name": "Driver Top",
-              "icon": "steering-wheel",
-              "icon_color": "#007BFF"
-            },
-            {
-              "url": "https://e-drive.com.ua/",
-              "name": "E-Drive",
-              "icon": "bolt",
-              "icon_color": "#28A745"
-            }
-          ]
-        },
-        {
-          "name": "home",
-          "links": [
-            {
-              "url": "https://www.novakom.com.ua/abonent/payment/index.html",
-              "name": "Novakom Payment",
-              "icon": "credit-card",
-              "icon_color": "#007BFF"
-            },
-            {
-              "url": "https://my.yasno.com.ua/cabinet/person/",
-              "name": "Yasno Cabinet",
-              "icon": "bulb",
-              "icon_color": "#F1C232"
-            }
-          ]
-        },
       ]
     },
     {

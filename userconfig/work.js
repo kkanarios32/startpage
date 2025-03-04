@@ -37,10 +37,10 @@ const CONFIG = new Config({
           "name": "daily",
           "links": [
             {
-              "url": "https://chat.openai.com/",
-              "name": "ChatGPT",
-              "icon": "brand-openai",
-              "icon_color": "#00a67e"
+              "url": "https://ticktick.com/webapp/#q/week/tasks",
+              "name": "TickTick",
+              "icon": "list-check",
+              "icon_color": "#FFAA00"
             },
             {
               "name": "Github",
@@ -88,6 +88,12 @@ const CONFIG = new Config({
               "url": "https://app.asana.com/0/534203904994086/list",
               "icon": "brand-asana",
               "icon_color": "#ffa500"
+            },
+            {
+              "url": "https://meet.google.com",
+              "name": "Google Meet",
+              "icon": "video",
+              "icon_color": "#34A853"
             }
           ]
         },
@@ -96,7 +102,7 @@ const CONFIG = new Config({
           "links": [
             {
               "name": "Datadog",
-              "url": "https://app.datadoghq.com/apm/home",
+              "url": "https://app.datadoghq.com/logs",
               "icon": "dog",
               "icon_color": "#774aa4"
             },
