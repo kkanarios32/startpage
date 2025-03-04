@@ -6,7 +6,6 @@ class Statusbar extends Component {
     tabs: '#tabs ul li',
     indicator: '.indicator',
     addTab: '.add-tab',
-    fastLink: '.fast-link',
   };
 
   modal;
@@ -14,15 +13,18 @@ class Statusbar extends Component {
 
   constructor() {
     super();
-
     this.setDependencies();
   }
+
+
 
   setDependencies() {
     this.externalRefs = {
       categories: this.parentNode.querySelectorAll(this.refs.categories)
     };
   }
+
+
 
   setAttributes() {
     this.modal = RenderedComponents['modal-popup'];
@@ -171,21 +173,7 @@ class Statusbar extends Component {
           background: var(--nord3);
       }
 
-      .fast-link {
-          border: 0;
-          background: var(--nord2);
-          color: var(--nord4);
-          cursor: pointer;
-          border-radius: 5px 15px 15px 5px;
-      }
 
-      .fast-link:hover {
-          filter: brightness(1.2);
-      }
-
-      .fast-link-icon {
-          width: 70%;
-      }
     `;
   }
 
@@ -193,9 +181,7 @@ class Statusbar extends Component {
     return `
         <div id="tabs">
             <cols>
-                <button class="+ fast-link">
-                  <img class="fast-link-icon" src="src/img/openai.png"/>
-                </button>
+                <fast-link class="+"></fast-link>
                 <ul class="- indicator"></ul>
                 <div class="+ widgets col-end">
                     <crypto-rate class="+ widget"></crypto-rate>
@@ -215,11 +201,7 @@ class Statusbar extends Component {
     document.onkeydown = (e) => this.handleKeyPress(e);
     document.onwheel = (e) => this.handleWheelScroll(e);
 
-    this.refs.fastLink.onclick = () => {
-      if (CONFIG.config.fastLink) {
-        window.location.href = CONFIG.config.fastLink;
-      }
-    }
+
 
     if (CONFIG.openLastVisitedTab)
       window.onbeforeunload = () => this.saveCurrentTab();

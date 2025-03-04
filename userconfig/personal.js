@@ -21,7 +21,8 @@ const CONFIG = new Config({
   },
   keybindings: {
     "t": 'todo-list',
-    "s": 'search-bar'
+    "s": 'search-bar',
+    "c": 'fast-link'
   },
   disabled: [
     'todo-list'
