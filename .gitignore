@@ -1,2 +1,6 @@
 .log/
 .idea/
+
+# Ignore all config files except default.js
+/userconfig/*
+!/userconfig/default.js

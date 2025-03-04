@@ -201,8 +201,6 @@ class Statusbar extends Component {
     document.onkeydown = (e) => this.handleKeyPress(e);
     document.onwheel = (e) => this.handleWheelScroll(e);
 
-
-
     if (CONFIG.openLastVisitedTab)
       window.onbeforeunload = () => this.saveCurrentTab();
   }
