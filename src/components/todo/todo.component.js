@@ -221,12 +221,12 @@ class Todo extends Component {
   style() {
     return `
       :host {
-          --done: #37eb94;
-          --todo: #ff1b91;
-          --bg: #0f0f12;
+          --done: var(--nord14);
+          --todo: var(--nord11);
+          --bg: var(--nord0);
           --task-options-reveal-time: .15s;
-          --task-options-done-background: #357d5a;
-          --task-options-todo-background: #84355e;
+          --task-options-done-background: var(--nord14);
+          --task-options-todo-background: var(--nord11);
       }
 
       button {
@@ -242,7 +242,7 @@ class Todo extends Component {
       .header-title {
           font-weight: 100;
           font-size: 24pt;
-          color: rgba(255, 255, 255, .1);
+          color: var(--nord3);
           text-align: center;
           width: 100%;
       }
@@ -254,14 +254,14 @@ class Todo extends Component {
           width: 100%;
           padding: 8px;
           border-radius: 10px;
-          box-shadow: inset 0 0 0 2px #18181d;
+          box-shadow: inset 0 0 0 2px var(--nord1);
       }
 
       .counter {
           grid-column: 3;
-          color: rgba(255, 255, 255, .1);
+          color: var(--nord3);
           font-size: 14px;
-          background: #18181d;
+          background: var(--nord1);
           border-radius: 5px;
       }
 
@@ -269,17 +269,17 @@ class Todo extends Component {
           cursor: pointer;
           height: 25px;
           min-width: 30px;
-          background: #18181d;
+          background: var(--nord1);
           border-radius: 5px;
-          box-shadow: 0 0 0 1px #27272a, 0 5px 5px rgb(0 0 0 / 20%);
+          box-shadow: 0 0 0 1px var(--nord3), 0 5px 5px rgb(0 0 0 / 20%);
       }
 
       .clean-tasks {
           grid-column: 5;
           opacity: .5;
           cursor: unset;
-          background: #81395e;
-          box-shadow: 0 0 0 1px #c975a0, 0 5px 5px rgb(0 0 0 / 20%);
+          background: var(--nord11);
+          box-shadow: 0 0 0 1px var(--nord13), 0 5px 5px rgb(0 0 0 / 20%);
       }
 
       .clean-tasks.active {
@@ -292,15 +292,15 @@ class Todo extends Component {
       }
 
       .clean-tasks-icon {
-          color: #c975a0;
+          color: var(--nord13);
       }
 
       .add-task:hover .add-task-icon {
-          color: #c8ffe5;
+          color: var(--nord8);
       }
 
       .clean-tasks.active:hover .clean-tasks-icon {
-          color: #efb2d1;
+          color: var(--nord15);
       }
 
       .todo-count {
@@ -326,17 +326,17 @@ class Todo extends Component {
 
       .todo-count:hover,
       .done-count:hover {
-          background: #212127;
+          background: var(--nord2);
       }
 
       .todo-count.active {
           background: var(--todo);
-          color: #6d244a;
+          color: var(--nord4);
       }
 
       .done-count.active {
           background: var(--done);
-          color: #1f6744;
+          color: var(--nord4);
       }
 
       .add-task {
@@ -345,8 +345,8 @@ class Todo extends Component {
           grid-column: 1;
           grid-row: 1;
           transition: top .3s;
-          background: #306554;
-          box-shadow: 0 0 0 1px #5ea991, 0 5px 5px rgb(0 0 0 / 20%);
+          background: var(--nord14);
+          box-shadow: 0 0 0 1px var(--nord7), 0 5px 5px rgb(0 0 0 / 20%);
       }
 
       :is(.add-task,
@@ -360,7 +360,7 @@ class Todo extends Component {
 
       .add-task .add-task-icon {
           transition: transform .3s;
-          color: #79bf9e;
+          color: var(--nord7);
       }
 
       .tasks {
@@ -376,9 +376,9 @@ class Todo extends Component {
           width: 100%;
           min-height: 70px;
           box-shadow: 0 1px 0 0 rgba(0, 0, 0, .5),
-                      0 4px 0 0 #18181d,
+                      0 4px 0 0 var(--nord1),
                       0 5px 0 rgba(0, 0, 0, .5),
-                      0 8px 0 0 #18181d;
+                      0 8px 0 0 var(--nord1);
           transition: opacity .5s cubic-bezier(0.4, 0, 1, 1),
                       margin .5s cubic-bezier(0.4, 0, 1, 1),
                       box-shadow .2s,
@@ -496,7 +496,7 @@ class Todo extends Component {
           flex-wrap: wrap;
           width: calc(100% - 1px);
           top: -335px;
-          background: #18181d;
+          background: var(--nord1);
           transition: top .5s;
           padding: 0 1.5em 1em;
           z-index: 9;
@@ -567,7 +567,7 @@ class Todo extends Component {
           height: 100%;
           position: relative;
           padding: 1em 1em .5em;
-          background: #18181d;
+          background: var(--nord1);
           transition: height var(--task-options-reveal-time) ease-in,
                       margin var(--task-options-reveal-time) ease-in,
                       box-shadow var(--task-options-reveal-time) ease-in;
@@ -596,7 +596,7 @@ class Todo extends Component {
           width: 100%;
           height: 100%;
           position: absolute;
-          background: #18181d;
+          background: var(--nord1);
           z-index: 1;
           top: 100%;
           opacity: 0;

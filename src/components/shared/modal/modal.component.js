@@ -59,11 +59,12 @@ class Modal extends Component {
           top: calc(-100% - ${this.height}px);
           bottom: 0;
           right: 0; left: 0;
-          background: #18181d;
+          background: var(--nord1);
           padding: 1em 1.5em;
           box-sizing: border-box;
           transition: top .5s cubic-bezier(0.06, -0.05, 0, 1);
           box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+          border: 1px solid var(--nord3);
       }
 
       .modal-content {
@@ -75,13 +76,13 @@ class Modal extends Component {
           align-items: center;
           justify-content: space-between;
           height: 30px;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid var(--nord4);
           padding-bottom: 0.5em;
       }
 
       .modal-close,
       .modal-header-title {
-          color: white;
+          color: var(--nord6);
       }
 
       .modal-close i {

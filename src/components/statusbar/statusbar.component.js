@@ -84,7 +84,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li:not(:last-child):hover {
-          background: #34343e;
+          background: var(--nord2);
       }
 
       #tabs ul li:last-child {
@@ -122,7 +122,7 @@ class Statusbar extends Component {
           height: 32px;
           color: #fff;
           font-size: 12px;
-          background: #1d1d21;
+          background: var(--nord1);
       }
 
       .widgets:hover .edit {
@@ -145,7 +145,7 @@ class Statusbar extends Component {
 
       .widget:hover {
           cursor: pointer;
-          background: rgba(255, 255, 255, .05);
+          background: var(--nord2);
       }
 
       #tabs > cols {
@@ -168,13 +168,13 @@ class Statusbar extends Component {
           left: 0;
           height: calc(100% - 15px);
           width: 1px;
-          background: rgb(255 255 255 / 10%);
+          background: var(--nord3);
       }
 
       .fast-link {
           border: 0;
-          background: #282830;
-          color: #9898a5;
+          background: var(--nord2);
+          color: var(--nord4);
           cursor: pointer;
           border-radius: 5px 15px 15px 5px;
       }

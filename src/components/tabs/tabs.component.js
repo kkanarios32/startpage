@@ -4,7 +4,7 @@ class Links extends Component {
   }
 
   static getIcon(link) {
-    const defaultColor = '#726f6f';
+    const defaultColor = 'var(--nord4)';
 
     return link.icon
       ? `<i class="ti ti-${link.icon} link-icon"
@@ -80,7 +80,7 @@ class Tabs extends Component {
       status-bar {
           bottom: -70px;
           height: 32px;
-          background: #18181d;
+          background: var(--nord1);
           border-radius: 4px;
           box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
       }
@@ -106,7 +106,7 @@ class Tabs extends Component {
           bottom: 0;
           margin: auto;
           box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-          background: #18181d;
+          background: var(--nord0);
       }
 
       .categories {
@@ -155,7 +155,7 @@ class Tabs extends Component {
           right: 0;
           width: 70%;
           height: 100%;
-          background: #18181d;
+          background: var(--nord0);
           padding: 5%;
           flex-wrap: wrap;
       }
@@ -165,17 +165,18 @@ class Tabs extends Component {
       }
 
       .categories ul .links a {
-          color: #8a8b93;
+          color: var(--nord4);
           text-decoration: none;
           font: 700 18px 'Roboto', sans-serif;
           transition: all .2s;
           display: inline-flex;
           align-items: center;
           padding: .4em .7em;
-          background: rgb(35 35 44);
-          box-shadow: 0 4px #1c1d24, 0 5px 10px rgb(0 0 0 / 50%);
-          border-radius: 2px;
+          background: var(--nord1);
+          box-shadow: 0 2px var(--nord0);
+          border-radius: 4px;
           margin-bottom: .7em;
+          border: 1px solid var(--nord3);
       }
 
       .categories .link-info {
@@ -185,9 +186,10 @@ class Tabs extends Component {
       .categories .link-info:not(:last-child) { margin-right: .5em; }
 
       .categories ul .links a:hover {
-          transform: scale(1.2);
-          box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, .5), 0 -4px 5px rgba(0, 0, 0, .1);
-          color: #fff;
+          transform: scale(1.05);
+          background: var(--nord2);
+          border-color: var(--nord4);
+          color: var(--nord6);
       }
 
       .categories ul::after {
@@ -224,7 +226,7 @@ class Tabs extends Component {
       }
 
       .categories .links li h1 {
-          color: #42424e;
+          color: var(--nord8);
           font-size: 13px;
           margin-bottom: 1em;
           font-weight: 600;
@@ -235,7 +237,7 @@ class Tabs extends Component {
 
       .categories .link-icon {
           font-size: 27px;
-          color: #726f6f;
+          color: var(--nord4);
       }
 
       .categories .link-icon + .link-name {
