@@ -48,8 +48,13 @@
           await loadScript(src);
         }
 
-        // Load config
-        await loadScript(`userconfig/${configType}.js`);
+        // Try to load specified config, fallback to default if fails
+        try {
+          await loadScript(`userconfig/${configType}.js`);
+        } catch (e) {
+          console.warn(`Failed to load config '${configType}', falling back to default`);
+          await loadScript('userconfig/default.js');
+        }
 
         // Load components in order
         const componentScripts = [

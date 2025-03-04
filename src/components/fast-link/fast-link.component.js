@@ -40,9 +40,12 @@ class FastLink extends Component {
   }
 
   template() {
+    if (!CONFIG.config.fastLink?.url) return '';
+    
+    const iconSrc = CONFIG.config.fastLink.icon || 'src/img/openai.png';
     return `
       <button class="+ fast-link">
-        <img class="fast-link-icon" src="src/img/openai.png"/>
+        <img class="fast-link-icon" src="${iconSrc}"/>
       </button>
     `;
   }
@@ -52,8 +55,8 @@ class FastLink extends Component {
   }
 
   handleClick() {
-    if (CONFIG.config.fastLink) {
-      window.location.href = CONFIG.config.fastLink;
+    if (CONFIG.config.fastLink?.url) {
+      window.location.href = CONFIG.config.fastLink.url;
     }
   }
 

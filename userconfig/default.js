@@ -27,7 +27,10 @@ const CONFIG = new Config({
     "c": 'fast-link'
   },
   disabled: [],
-  fastLink: "https://chat.openai.com/",
+  fastLink: {
+    url: "https://chat.openai.com/",
+    icon: "src/img/openai.png"
+  },
   openLastVisitedTab: false,
   tabs: [
     {
