@@ -181,7 +181,7 @@ class Statusbar extends Component {
     return `
         <div id="tabs">
             <cols>
-                <fast-link class="+"></fast-link>
+                <fast-link></fast-link>
                 <ul class="- indicator"></ul>
                 <div class="+ widgets col-end">
                     <crypto-rate class="+ widget"></crypto-rate>

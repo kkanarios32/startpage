@@ -26,6 +26,7 @@ class FastLink extends Component {
           justify-content: center;
           border-radius: 5px 15px 15px 5px;
           margin-top: 1px;
+          text-decoration: none;
       }
 
       .fast-link:hover {
@@ -44,9 +45,9 @@ class FastLink extends Component {
     
     const iconSrc = CONFIG.config.fastLink.icon || 'src/img/openai.png';
     return `
-      <button class="+ fast-link">
+      <a href="${CONFIG.config.fastLink.url}" class="fast-link">
         <img class="fast-link-icon" src="${iconSrc}"/>
-      </button>
+      </a>
     `;
   }
 
