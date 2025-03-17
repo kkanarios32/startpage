@@ -4,3 +4,6 @@
 # Ignore all config files except default.js
 /userconfig/*
 !/userconfig/default.js
+
+# Ignore local configuration
+config.local.json

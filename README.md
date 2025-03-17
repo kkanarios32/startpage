@@ -15,10 +15,11 @@ This is a fork of the original [dawn](https://github.com/b-coimbra/dawn) start p
 
 Key improvements in this fork include:
 - Full Nord theme color scheme integration (not the best, but I'm trying)
-- Fast link component with hotkey support (`c` key by default) and clickable button (idea from Tartarus startpage)
+- [Fast link component](#fast-link) with hotkey support (`c` key by default) and clickable button (idea from Tartarus startpage)
+- [Chrome extension support](#chrome-extension-setup) for replacing the new tab page
 - Various UI and performance improvements
-- Streamlined configuration
-- Dynamic configuration support
+- [Streamlined configuration](#configuration)
+- [Dynamic configuration support](#dynamic-configuration)
 
 ## Keybindings
 
@@ -157,6 +158,28 @@ Alternatively, click on the crypto widget to change the settings:
 <p align="left">
   <img src="https://i.imgur.com/aUnoJLA.png">
 </div>
+
+## Chrome Extension Setup
+
+Dawn can be used as a Chrome extension to replace your new tab page. Follow these steps to set it up:
+
+1. Clone or download this repository
+2. Configure your personal settings by creating a `config.local.json` file
+3. Load the extension in Chrome via `chrome://extensions/` in developer mode
+
+For detailed instructions, see the [Chrome Extension Setup Guide](docs/chrome-extension-setup.md).
+
+### Default Configuration
+
+You can set your preferred default configuration by creating a `config.local.json` file in the root directory:
+
+```json
+{
+  "defaultConfig": "your_config_name"
+}
+```
+
+This file is ignored by git, ensuring your personal preferences remain private.
 
 ## Credits
 

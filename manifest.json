@@ -1,0 +1,21 @@
+{
+    "name": "New tab",
+    "description": "Overrides the new tab page",
+    "version": "0.1",
+    "incognito": "split",
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; connect-src https://fonts.googleapis.com https://cdn.jsdelivr.net https://fonts.gstatic.com https://api.openweathermap.org https://min-api.cryptocompare.com"
+    },
+    "permissions": [],
+    "host_permissions": [
+      "https://fonts.googleapis.com/*",
+      "https://cdn.jsdelivr.net/*",
+      "https://fonts.gstatic.com/*",
+      "https://api.openweathermap.org/*",
+      "https://min-api.cryptocompare.com/*"
+    ],
+    "manifest_version": 3
+}
