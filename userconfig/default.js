@@ -6,8 +6,8 @@ const CONFIG = new Config({
   },
   overrideStorage: true,
   temperature: {
-    location: 'London, UK',
-    scale: 'C'
+    location: 'Ann Arbor',
+    scale: 'F'
   },
   clock: {
     format: 'h:i p',
@@ -26,7 +26,10 @@ const CONFIG = new Config({
     "s": 'search-bar',
     "c": 'fast-link'
   },
-  disabled: [],
+  disabled: [
+    'todo-list' // search-bar, crypto-rate, current-time, weather-forecast, status-bar
+  ],
+
   fastLink: {
     url: "https://chat.openai.com/",
     icon: "src/img/openai.png"
@@ -75,12 +78,6 @@ const CONFIG = new Config({
               "icon": "brand-stackoverflow",
               "icon_color": "#f48024"
             },
-            {
-              "url": "https://developer.mozilla.org",
-              "name": "MDN",
-              "icon": "brand-firefox",
-              "icon_color": "#ff9400"
-            }
           ]
         }
       ]
